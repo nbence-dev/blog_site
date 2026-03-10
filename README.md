@@ -8,53 +8,22 @@ A full-stack blog platform built with Python and Flask. The application supports
 
 ---
 
-## GitHub About (Repository Description)
-
-> Full-stack Flask blog with user auth, role-based admin controls, rich-text post editor, Gravatar-integrated comments, and PostgreSQL/SQLite support — deployable to Vercel.
-
----
-
-## Suggested GitHub Repository Name
-
-```
-flask-blog-platform
-```
-
-**Alternatives:**
-- `flask-multi-user-blog`
-- `python-blog-app`
-- `flask-blog-cms`
-
----
-
-## LinkedIn Summary
-
-**Project: Flask Blog Platform**
-
-Built a full-stack blog web application using Python and Flask, implementing end-to-end features from database design to front-end rendering. The platform supports secure user registration and login with salted password hashing, a role-based admin system that gates content management behind an access-control decorator, and a relational commenting system tied to both users and posts. Integrated CKEditor for rich-text post authoring and Gravatar for user profile images. Configured SQLAlchemy ORM with both SQLite (development) and PostgreSQL (production) adapters and deployed using Gunicorn on Vercel.
-
-**Skills demonstrated:** Python · Flask · SQLAlchemy · PostgreSQL · SQLite · Flask-Login · Flask-WTF · WTForms · Werkzeug · CKEditor · Bootstrap 5 · Gravatar API · Gunicorn · Vercel · REST routing · ORM data modeling · Role-based access control · Password hashing · Environment variable management · Web application deployment
-
----
-
-## README
-
 ### Tech Stack
 
-| Layer | Technology |
-|---|---|
-| Language | Python 3 |
-| Web Framework | Flask 2.3 |
-| ORM | SQLAlchemy 2 / Flask-SQLAlchemy |
-| Auth | Flask-Login, Werkzeug password hashing |
-| Forms | Flask-WTF, WTForms |
-| Rich Text Editor | Flask-CKEditor |
-| UI | Bootstrap 5 (Bootstrap-Flask) |
-| Avatars | Flask-Gravatar |
-| Database (dev) | SQLite |
-| Database (prod) | PostgreSQL (psycopg2-binary) |
-| WSGI Server | Gunicorn |
-| Deployment | Vercel |
+| Layer            | Technology                             |
+| ---------------- | -------------------------------------- |
+| Language         | Python 3                               |
+| Web Framework    | Flask 2.3                              |
+| ORM              | SQLAlchemy 2 / Flask-SQLAlchemy        |
+| Auth             | Flask-Login, Werkzeug password hashing |
+| Forms            | Flask-WTF, WTForms                     |
+| Rich Text Editor | Flask-CKEditor                         |
+| UI               | Bootstrap 5 (Bootstrap-Flask)          |
+| Avatars          | Flask-Gravatar                         |
+| Database (dev)   | SQLite                                 |
+| Database (prod)  | PostgreSQL (psycopg2-binary)           |
+| WSGI Server      | Gunicorn                               |
+| Deployment       | Vercel                                 |
 
 ---
 
@@ -144,24 +113,6 @@ flask --app main run --debug
 ```
 
 The app will be available at `http://127.0.0.1:5000`.
-
----
-
-### Deployment
-
-#### Vercel
-
-The `vercel.json` file is already configured. Push to a GitHub repository connected to Vercel and set the `SECRET_KEY` and `DATABASE_URL` environment variables in the Vercel project settings.
-
-#### Any WSGI Host (Heroku, Railway, Render, etc.)
-
-The `Procfile` defines the Gunicorn command:
-
-```
-web: gunicorn main:app
-```
-
-Set `SECRET_KEY` and `DATABASE_URL` as environment variables on the host platform.
 
 ---
 
